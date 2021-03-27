@@ -1,0 +1,56 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usepackage{svg}
+\usetheme[noto, showmaxslides]{pureminimalistic}
+\usepackage{appendixnumberbeamer}
+\usepackage[backend=biber, doi=false, maxbibnames=2, maxcitenames=2,style=numeric, sorting=none, url=false, eprint=false]{biblatex}
+\addbibresource{references.bib}
+
+\renewcommand{\appendixname}{\texorpdfstring{\translate{appendix}}{appendix}}
+\renewcommand{\logotitle}{\includesvg[width=.2\linewidth]{logos/unibo-logo.svg}}
+\renewcommand{\logoheader}{}
+\renewcommand{\logofooter}{\includegraphics[width=.5\linewidth]{logos/mme-logo.png}}
+
+\definecolor{bg}{RGB}{236, 240, 241}
+\definecolor{text}{RGB}{52, 73, 94}
+\definecolor{title}{RGB}{231, 76, 60}
+\renewcommand{\beamerbgcolor}{bg}
+\renewcommand{\beamertextcolor}{text}
+\renewcommand{\beamertitlecolor}{title}
+
+\title[MME]{The Moral Machine Experiment}
+\author{Leonardo Calbi, Lorenzo Cellini, Alessio Falai\\}
+\institute{Alma Mater Studiorum - University of Bologna} 
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{frame}[plain, noframenumbering]{Outline}
+    \tableofcontents
+\end{frame}
+
+\section{Demo}
+\begin{frame}
+    \cite{mme}
+\end{frame}
+
+\appendix
+\begin{frame}[plain, noframenumbering]{References}
+    \printbibliography
+\end{frame}
+
+\section*{Backup frames}
+\begin{frame}[plain, noframenumbering]
+    \centering
+    \vfill
+    {\fontsize{40}{50}\selectfont Backup frames}
+    \vfill
+\end{frame}
+
+\begin{frame}{Backup demo}
+    Demo
+\end{frame}
+
+\end{document}

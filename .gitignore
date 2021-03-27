@@ -1,0 +1,18 @@
+# intermediate files
+*.aux
+*.bbl
+*.blg
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.nav
+*.vrb
+*.fdb_latexmk
+*.fls
+*.bcf
+*.run.xml
+*.synctex.gz
+*.xdv
+__latexindent_temp.tex
