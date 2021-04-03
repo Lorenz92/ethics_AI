@@ -31,7 +31,7 @@
 
 ### Notes
 
-* PERSONE FREGA UN CAZZO: si documentano solo quando succede qualcosa, schianto
+* La maggioranza della comunità non ha interesse nell'informazione etica ma si trova a riflettere su tali scelte e situazioni solo quando il fatto è già avvenuto. Sicuramente non è un fattore determinante nella decisione di comprare un veicolo a discapito di un altro.
 
 ## Country-level predictors
 
