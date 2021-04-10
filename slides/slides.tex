@@ -1,4 +1,6 @@
 \documentclass[aspectratio=169]{beamer}
+\usepackage{emoji}
+\usepackage{siunitx}
 \usepackage[utf8]{inputenc}
 \usepackage{tikz}
 \usepackage{svg}
@@ -18,7 +20,6 @@
 \renewcommand{\beamerbgcolor}{bg}
 \renewcommand{\beamertextcolor}{text}
 \renewcommand{\beamertitlecolor}{title}
-
 \title[MME]{The Moral Machine Experiment}
 \author{Leonardo Calbi, Lorenzo Cellini, Alessio Falai\\}
 \institute{Alma Mater Studiorum - University of Bologna}
@@ -43,32 +44,60 @@
 \end{frame}
 
 % Introduction
-\section{Why ethics matters for autonomous cars}
+\section{Why ethics matters for autonomous vehicles}
+
 \begin{frame}
-    Introduction
+    \frametitle{Ethical dilemmas in AVs}
+    AVs will be active actors in taking life-and-death decisions in road accident scenarios \cite{why-ethics-matters}
+    \begin{itemize}
+        \item Should AVs discriminate lives on the basis of gender, race, religion, age, etc.?
+        \item Who should be responsible for the action taken?
+        \item Are accidents always avoidable? If not, should we implement crash-optimization techinques?
+        \item Is it better to choose to kill someone or to let someone else die?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Self driving Uber kills woman}
+    \begin{columns}[totalwidth=1.0\textwidth]
+        \begin{column}{0.5\textwidth}
+            Unfortunately, some accidents are unavoidable
+            \begin{itemize}
+                \item Should the car have braked?
+                \item Would avoiding the woman have killed the safety driver?
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            \includegraphics[width=1.0\linewidth]{assets/death-of-Elaine-Herzberg.jpg}
+        \end{column}
+    \end{columns}
+    \bigskip
+    \begin{center}
+        That's why we should prioritize analysis on such AV-related ethical dilemmas
+    \end{center}
 \end{frame}
 
 \section{The Moral Machine Experiment}
 
 \begin{frame}
     \frametitle{Introduction}
-    \begin{columns}
+    \begin{columns}[totalwidth=1.0\textwidth]
         \begin{column}{0.6\linewidth}
             \begin{itemize}
-                \item MME \cite{mme} is an online experimental platform, designed to gauge social expectections about how autonomous vehicles should solve moral dilemmas
-                \item It gathered almost $40M$ decisions from $233$ different countries in $10$ languages
+                \item MME \cite{mme} is an online experimental platform, designed to gauge social expectations about how AVs should solve moral dilemmas
+                \item It gathered almost \num{40}M decisions from \num{233} different countries in \num{10} languages
                 \item What would you want an AV to do if its brakes failed?
-                \begin{itemize}
-                    \item Keep the lane and hit pedestrians on the road?
-                    \item Swerve and hit pedestrians on the other lane?
-                    \item Hit a barrier with the car?
-                \end{itemize}
+                      \begin{itemize}
+                          \item Keep the lane and hit pedestrians on the road?
+                          \item Swerve and hit pedestrians on the other lane?
+                          \item Hit a barrier with the car?
+                      \end{itemize}
                 \item What would happen to the chosen characters?
-                \begin{itemize}
-                    \item Skull $\rightarrow$ death
-                    \item Medical cross $\rightarrow$ injury
-                    \item Question mark $\rightarrow$ unknown
-                \end{itemize}
+                      \begin{itemize}
+                          \item \emoji{skull-and-crossbones}  $\rightarrow$ death
+                          \item \emoji{face-with-head-bandage} $\rightarrow$ injury
+                          \item \emoji{question-mark} $\rightarrow$ unknown
+                      \end{itemize}
             \end{itemize}
         \end{column}
         \begin{column}{0.4\linewidth}
@@ -79,17 +108,25 @@
 
 \begin{frame}
     \frametitle{Analysis framework}
-    \begin{enumerate}
-        \item Sparing humans (versus pets)
-        \item Staying on course (versus swerving)
-        \item Sparing passengers (versus pedestrians)
-        \item Sparing more lives (versus fewer lives)
-        \item Sparing men (versus women)
-        \item Sparing the young (versus the elderly)
-        \item Sparing pedestrians who cross legally (versus jaywalking)
-        \item Sparing the fit (versus the less fit)
-        \item Sparing those with higher social status (versus lower social status)
-    \end{enumerate}
+    The analysis was carried out on the following nine dimensions:
+    \begin{itemize}
+        \item Structural features
+              \begin{enumerate}
+                  \item Staying on course vs swerving
+                  \item Sparing passengers vs pedestrians
+                  \item Sparing more lives vs fewer lives
+              \end{enumerate}
+        \item Personal features
+              \begin{enumerate}
+                  \setcounter{enumi}{3}
+                  \item Sparing humans vs pets
+                  \item Sparing men vs women
+                  \item Sparing the young vs the elderly
+                  \item Sparing pedestrians who cross legally vs jaywalking
+                  \item Sparing the fit vs the less fit
+                  \item Sparing those with higher social status vs lower social status
+              \end{enumerate}
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -103,14 +140,14 @@
 
 \begin{frame}
     \frametitle{Individual variations}
-    \begin{columns}
+    \begin{columns}[totalwidth=1.0\textwidth]
         \begin{column}{0.6\linewidth}
             \includegraphics[width=1.0\linewidth]{assets/demographics-mme.png}
         \end{column}
         \begin{column}{0.4\linewidth}
             \begin{itemize}
-                \item Subgroup of Moral Machine users ($492921$) who completed the optional demographic survey on age, education, gender, income, and political and religious views
-                \item Including all six characteristic variables in regression-based estimators of each of the nine attributes shows that individual variations have no sizable impact on any of them (all below 0.1 $\rho$-value)
+                \item Subgroup of Moral Machine users (\num{492921}) who completed the optional demographic survey on age, education, gender, income, and political and religious views
+                \item Including all six characteristic variables in regression-based estimators of each of the nine attributes shows that individual variations have no sizable impact on any of them (all below $0.1$ $\rho$-value)
             \end{itemize}
         \end{column}
     \end{columns}
@@ -118,7 +155,7 @@
 
 \begin{frame}
     \frametitle{Hierarchical clustering of countries}
-    \begin{columns}
+    \begin{columns}[totalwidth=1.0\textwidth]
         \begin{column}{0.6\linewidth}
             \includegraphics[width=1.0\linewidth]{assets/countries-mme.jpg}
         \end{column}
@@ -152,7 +189,7 @@
         \item Three strong preferences: sparing human lives, more lives and young lives
         \item Some preferences based on gender or social status vary considerably across countries, and appear to reflect underlying societal level preferences for egalitarianism
         \item Samples are not guaranteed to be representative: this means that policymakers should not embrace MME results as the final word on societal preferences
-        \item Technologically unrealistic assumptions, such as the absence of uncertainty over character classification (adult vs children) and life/death outcomes 
+        \item Technologically unrealistic assumptions, such as the absence of uncertainty over character classification (adult vs children) and life/death outcomes
     \end{enumerate}
 \end{frame}
 
@@ -162,38 +199,38 @@
     \begin{itemize}
         \item The apparent preference for inequality in MME results is driven by the specific "trolley-type" paradigm used by the experimenters
         \item MME concludes that people want AVs to make decisions about who to kill on the basis of personal features, including physical fitness, age, status and gender
-        \begin{itemize}
-            \item This conclusion contradicts well-documented ethical preferences for equal treatment across demographic features and identities
-            \item Ignoring personal traits is also more consistent with the current technical capacities of AVs
-        \end{itemize}
+              \begin{itemize}
+                  \item This conclusion contradicts well-documented ethical preferences for equal treatment across demographic features and identities
+                  \item Ignoring personal traits is also more consistent with the current technical capacities of AVs
+              \end{itemize}
     \end{itemize}
 \end{frame}
 
 \begin{frame}
     \frametitle{Experiments}
-    To prove the ineffectiveness of MME, \citeauthor{against-mme} realized three different experiments
+    To prove the ineffectiveness of MME, \citeauthor{against-mme} realized three different experiments \cite{against-mme}
     \begin{enumerate}
-        \item People were randomly assigned either a forced inequality question (replication of MME in a simplified setting) or an equality-allowed condition (\textit{"treat the lives of group A and B equally"})
-        \item Similar to the first study, with a modified third option: \textit{"AVs should decide who to save and who to kill without considering their personal features"}
+        \item People were randomly assigned either a forced inequality question (replication of MME in a simplified setting) or an equality-allowed condition (\textit{"\textbf{treat} the lives of group A and B \textbf{equally}"})
+        \item Similar to the first study, with a modified third option: \textit{"AVs should decide who to save and who to \textbf{kill} without considering their personal features"}
         \item Participants chose which of the two AVs should be allowed on the road: AVs based solely on structural features or both structural and personal features revealed by MME
     \end{enumerate}
 \end{frame}
 
 \begin{frame}
     \frametitle{First experiment}
-    \begin{columns}
+    \begin{columns}[totalwidth=1.0\textwidth]
         \begin{column}{0.6\linewidth}
             \begin{itemize}
-                \item Quasi-representative sample: $1174$ US participants and $1178$ UK participants using an online survey system
+                \item Quasi-representative sample: \num{1174} US participants and \num{1178} UK participants using an online survey system
                 \item Results from the forced inequality condition closely match the global effects of the MME
                 \item People overwhelmingly selected the third option when it was available, revealing that they want autonomous vehicles to treat people equally
-                \begin{itemize}
-                    \item For example, when forced to choose between men and women, $87.7\%$ chose to save women, but $97.9\%$ of people actually preferred to treat both groups equally
-                \end{itemize}
+                      \begin{itemize}
+                          \item For example, when forced to choose between men and women, $87.7\%$ chose to save women, but $97.9\%$ of people actually preferred to treat both groups equally
+                      \end{itemize}
             \end{itemize}
         \end{column}
-        \begin{column}{0.4\linewidth}
-            \includegraphics[width=0.9\linewidth]{assets/against-mme-first-experiment.png}
+        \begin{column}{0.35\linewidth}
+            \includegraphics[width=1.0\linewidth]{assets/against-mme-first-experiment.png}
         \end{column}
     \end{columns}
 \end{frame}
@@ -202,20 +239,20 @@
 \begin{frame}
     \frametitle{Second experiment}
     \begin{itemize}
-        \item Sample: $843$ US participants from an online panel
+        \item Sample: \num{843} US participants from an online panel
         \item Study 2 rules out the concern of whether participants preferred the "treat equally" option in study 1 simply because it failed to mention killing
         \item Consistent with study 1, people expressed a robust preference for AVs to treat people equally by ignoring personal features
-        \begin{itemize}
-            \item For example, people preferred self-driving cars to not consider gender ($92.6\%$), fitness ($88.8\%$) or status ($84.7\%$)
-            \item The only substantial departure from study 1 was lawfulness: $53.1\%$ of people preferred to spare law abiders over law breakers
-        \end{itemize}
+              \begin{itemize}
+                  \item For example, people preferred self-driving cars to not consider gender ($92.6\%$), fitness ($88.8\%$) or status ($84.7\%$)
+                  \item The only substantial departure from study 1 was lawfulness: $53.1\%$ of people preferred to spare law abiders over law breakers
+              \end{itemize}
     \end{itemize}
 \end{frame}
 
 \begin{frame}
     \frametitle{Third experiment}
     \begin{itemize}
-        \item Sample: $993$ US participants from an online panel
+        \item Sample: \num{993} US participants from an online panel
         \item Personal features (law, fitness, status, gender and age) and structural features (passengers/pedestrians, fewer/more and action/inaction)
         \item Results show that $89.9\%$ of participants chose the structural-features-only car, once again expressing a desire for AVs that ignore personal features in ethical dilemmas
     \end{itemize}
@@ -227,25 +264,25 @@
         \item \citeauthor{against-mme} asked eight separate questions about general policy preferences (one per dimension), while MME had users go through multiple pairs of nine-dimensional outcomes
         \item The MME approach allows us to measure the weight of different moral priorities when pitted against each other, rather than considered in isolation, but participants cannot explicitly state that one dimension (for example, age) should not be taken into account
         \item The approach used by \citeauthor{against-mme} is more sensitive to social desirability, experimental demands and framing effects w.r.t. MME
-        \item MME's authors (\citeauthor{mme}) tried an approach similar to the one by \citeauthor{against-mme} that went unpublished
+        \item MME's authors (\citeauthor{mme}) tried an approach similar to the one by \citeauthor{against-mme} that remained unpublished \cite{reply-against-mme}
     \end{itemize}
 \end{frame}
 
 \begin{frame}
     \frametitle{MME unpublished experiment}
-    \begin{columns}
+    \begin{columns}[totalwidth=1.0\textwidth]
         \begin{column}{0.6\linewidth}
             \begin{itemize}
-                \item $585531$ MME users were taken to a page where they could position one slider for each of the nine dimensions explored by the Moral Machine: users could move the slider to express how important this dimension should be
+                \item \num{585531} MME users were taken to a page where they could position one slider for each of the nine dimensions explored by the Moral Machine: users could move the slider to express how important this dimension should be
                 \item Values on the sliders were initialized based on user's decisions on MME questions
-                \item Participants could easily express an equality preference by positioning the slider at the midpoint of the scale 
-                \begin{itemize}
-                    \item This is a continuos alternative to the method used by \citeauthor{against-mme}, which relies on visual (instead of textual) cues
-                \end{itemize}
+                \item Participants could easily express an equality preference by positioning the slider at the midpoint of the scale
+                      \begin{itemize}
+                          \item This is a continuos alternative to the method used by \citeauthor{against-mme}, which relies on visual (instead of textual) cues
+                      \end{itemize}
                 \item A clear deviation towards equality from standard MME results is mainly observed on social status preference and over other dimesions with a lower intensity
             \end{itemize}
         \end{column}
-        \begin{column}{0.4\linewidth}
+        \begin{column}{0.35\linewidth}
             \includegraphics[width=0.7\linewidth]{assets/reply-against-mme-experiment.png}
         \end{column}
     \end{columns}
@@ -253,24 +290,40 @@
 
 \section{Conclusions}
 \begin{frame}
-    \cite{mme}
+    \frametitle{Personal thoughts}
+    \begin{itemize}
+        \item MME results give us a snapshot of contemporary society: that's why we cannot rely only on them to build the basis of AVs systems
+        \item Why should AV's producers be resposible for each and every life-and-death decision? Can't we delegate such control to the safety driver? \cite{ethical-knob}
+        \item AVs should help us shape the future society in which we would like to live
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Technical limitations}
+    \begin{columns}[totalwidth=1.0\textwidth]
+        \begin{column}{0.5\linewidth}
+            \includegraphics[width=1.0\linewidth]{assets/adversarial-attack.png}
+        \end{column}
+        \begin{column}{0.5\linewidth}
+            \begin{itemize}
+                \item When can a vehicle be considered fully autonomous?
+                \item Are we ready to fully trust the underlying systems of AVs?
+                \item Are those systems secure enough?
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}[plain, noframenumbering]
+    \centering
+    \vfill
+    {\usebeamerfont{title} Thanks for the attention}
+    \vfill
 \end{frame}
 
 \appendix
 \begin{frame}[plain, noframenumbering]{References}
     \printbibliography
-\end{frame}
-
-\section*{Backup frames}
-\begin{frame}[plain, noframenumbering]
-    \centering
-    \vfill
-    {\usebeamerfont{title} Backup frames}
-    \vfill
-\end{frame}
-
-\begin{frame}{Backup demo}
-    Demo
 \end{frame}
 
 \end{document}
